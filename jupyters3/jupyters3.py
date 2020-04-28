@@ -99,7 +99,7 @@ class JupyterS3SecretAccessKeyAuthentication(JupyterS3Authentication):
 
     aws_access_key_id = Unicode(config=True)
     aws_secret_access_key = Unicode(config=True)
-    pre_auth_headers = Dict()
+    pre_auth_headers = Dict(config=True)
 
     @gen.coroutine
     def get_credentials(self):
